@@ -1,0 +1,7 @@
+[package]
+name = "declaring-variables"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+syntest = { git = "https://www.github.com/dcodesdev/rustfinity.com" }
