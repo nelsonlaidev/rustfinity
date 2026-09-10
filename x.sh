@@ -22,3 +22,6 @@ if ! cargo test; then
 fi
 
 rustfinity submit
+
+git add "$challenge"
+git commit -m "feat: $1"
