@@ -1,5 +1,3 @@
-use std::fmt::format;
-
 pub trait Describable {
     fn describe(&self) -> String;
 }
