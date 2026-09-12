@@ -16,8 +16,16 @@ fi
 
 cd "$challenge"
 
-if ! cargo test; then
+output="$(cargo test 2>&1)" || {
+  printf '%s\n' "$output"
   echo "Tests failed, not submitting." >&2
+  exit 1
+}
+
+printf '%s\n' "$output"
+
+if printf '%s\n' "$output" | grep -q '^warning'; then
+  echo "Warnings found, not submitting." >&2
   exit 1
 fi
 
