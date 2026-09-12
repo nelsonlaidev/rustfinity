@@ -23,5 +23,5 @@ fi
 
 rustfinity submit
 
-git add "$challenge"
+git add "$challenge" "$root/Cargo.lock"
 git commit -m "feat: $1"

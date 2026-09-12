@@ -142,6 +142,13 @@ name = "if-let-enums"
 version = "0.1.0"
 
 [[package]]
+name = "interior-mutability"
+version = "0.1.0"
+dependencies = [
+ "syntest",
+]
+
+[[package]]
 name = "iterators"
 version = "0.1.0"
 
