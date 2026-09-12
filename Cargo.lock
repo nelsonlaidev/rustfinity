@@ -3,6 +3,10 @@
 version = 4
 
 [[package]]
+name = "advanced-match-patterns"
+version = "0.1.0"
+
+[[package]]
 name = "animal-sanctuary-registry"
 version = "0.1.0"
 
