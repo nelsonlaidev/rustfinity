@@ -26,7 +26,6 @@ impl BookItem {
     }
 }
 
-// Example usage
 pub fn main() {
     let book_a = BookItem::Book {
         pages: 42,

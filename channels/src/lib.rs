@@ -35,14 +35,10 @@ pub struct Message {
 }
 
 pub fn create_message_channel() -> (Sender<Message>, Receiver<Message>) {
-    // 1. Implement this function to create and return a message channel
     mpsc::channel()
 }
 
 pub fn create_producer_thread(messages: Vec<Message>, tx: Sender<Message>) -> JoinHandle<()> {
-    // TODO: Create a thread that:
-    // - Updates the priority based on content
-    // - Sends the updated message through the channel
     thread::spawn(move || {
         for mut message in messages {
             if message.content.contains("ERROR") {
@@ -61,10 +57,6 @@ pub fn create_producer_thread(messages: Vec<Message>, tx: Sender<Message>) -> Jo
 }
 
 pub fn create_consumer_thread(rx: Receiver<Message>) -> JoinHandle<Vec<String>> {
-    // TODO: Create a thread that:
-    // - Receives messages from the channel
-    // - Formats them as "[PRIORITY|SENDER_ID] CONTENT"
-    // - Returns a vector of formatted messages
     thread::spawn(move || {
         let mut result = Vec::new();
 
@@ -79,7 +71,6 @@ pub fn create_consumer_thread(rx: Receiver<Message>) -> JoinHandle<Vec<String>> 
     })
 }
 
-// Example Usage
 pub fn main() {
     let (tx, rx) = create_message_channel();
 

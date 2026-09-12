@@ -6,7 +6,6 @@ pub enum Message {
 }
 
 pub fn process_text_message(message: &Message) -> String {
-    // Your code here...
     if let Message::Text(message) = &message {
         return format!("Processed Text: {message}");
     }

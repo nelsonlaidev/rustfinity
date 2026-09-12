@@ -1,11 +1,9 @@
-// 1. Finish the definition
 #[derive(Debug, PartialEq)]
 pub enum ParsePercentageError {
     InvalidInput,
     OutOfRange,
 }
 
-// 2. Implement the `Error` trait
 impl std::error::Error for ParsePercentageError {}
 impl std::fmt::Display for ParsePercentageError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -17,7 +15,6 @@ impl std::fmt::Display for ParsePercentageError {
 }
 
 pub fn parse_percentage(input: &str) -> Result<u8, ParsePercentageError> {
-    // 3. Implement this function
     let number = input.parse::<u8>();
 
     match number {
@@ -32,14 +29,13 @@ pub fn parse_percentage(input: &str) -> Result<u8, ParsePercentageError> {
     }
 }
 
-// Example usage
 pub fn main() {
     let result = parse_percentage("50");
-    println!("{:?}", result); // Should print: Ok(50)
+    println!("{:?}", result);
 
     let result = parse_percentage("101");
-    println!("{:?}", result); // Should print: Err(ParsePercentageError::OutOfRange)
+    println!("{:?}", result);
 
     let result = parse_percentage("abc");
-    println!("{:?}", result); // Should print: Err(ParsePercentageError::InvalidInput)
+    println!("{:?}", result);
 }

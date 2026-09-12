@@ -7,7 +7,6 @@ pub struct Student {
 
 impl Student {
     pub fn add_grade(&mut self, grade: u8) {
-        // Implement here
         self.grades.push(grade);
     }
 
@@ -16,7 +15,6 @@ impl Student {
             return 0.0;
         }
 
-        // Implement here
         self.grades.iter().map(|&x| x as f64).sum::<f64>() / self.grades.len() as f64
     }
 }

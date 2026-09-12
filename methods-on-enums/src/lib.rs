@@ -1,5 +1,4 @@
 pub enum VehicleStatus {
-    // Define the VehicleStatus variants here
     Parked,
     Driving { speed: u32 },
     BrokenDown(String),
@@ -23,7 +22,6 @@ impl VehicleStatus {
     }
 }
 
-// Example use case
 pub fn main() {
     let parked = VehicleStatus::Parked;
     assert!(parked.is_operational());

@@ -1,16 +1,12 @@
 pub trait Plugin {
-    // 1. Finish the trait
     fn name(&self) -> &str;
     fn execute(&self);
 }
 
 pub struct PluginManager {
-    // 2. Finish the struct
-    // Make fields public
     pub plugins: Vec<Box<dyn Plugin>>,
 }
 
-// 3. Implement the PluginManager
 impl PluginManager {
     pub fn new() -> Self {
         PluginManager {
@@ -43,7 +39,6 @@ impl PluginManager {
     }
 }
 
-// Example usage
 pub struct MyPlugin;
 
 impl Plugin for MyPlugin {

@@ -7,7 +7,6 @@ pub fn find_largest_in_slice(slice: &[i32]) -> Option<i32> {
     }
 }
 
-// Example Usage
 pub fn main() {
     let numbers = [1, 3, 7, 2, 5];
     assert_eq!(find_largest_in_slice(&numbers), Some(7));

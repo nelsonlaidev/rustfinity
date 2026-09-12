@@ -1,6 +1,5 @@
 use std::fmt::Display;
 
-// TODO: Define the generic function `compare_and_display` with appropriate trait bounds.
 pub fn compare_and_display<T>(a: T, b: T) -> T
 where
     T: Display + PartialOrd,
@@ -10,9 +9,8 @@ where
     } else {
         b
     }
-} // Complete the function definition
+}
 
-// Example usage
 pub fn main() {
     let greater = compare_and_display(10, 20);
     println!("Greater value: {}", greater);

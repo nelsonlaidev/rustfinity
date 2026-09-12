@@ -1,6 +1,5 @@
 use std::{collections::HashMap, hash::Hash};
 
-// 1. Finish the trait definition
 pub trait KeyValueStore {
     type Key;
     type Value;
@@ -9,13 +8,10 @@ pub trait KeyValueStore {
     fn get(&self, k: &Self::Key) -> Option<&Self::Value>;
 }
 
-// 2. Implement the trait for InMemoryStore
-// Make sure the fields are public
 pub struct InMemoryStore<K, V> {
     pub storage: HashMap<K, V>,
 }
 
-// 3. Implement the trait for InMemoryStore
 impl<K: Eq + Hash, V> KeyValueStore for InMemoryStore<K, V> {
     type Key = K;
     type Value = V;
@@ -28,7 +24,6 @@ impl<K: Eq + Hash, V> KeyValueStore for InMemoryStore<K, V> {
     }
 }
 
-// Example usage
 pub fn main() {
     let mut store: InMemoryStore<String, String> = InMemoryStore {
         storage: HashMap::new(),

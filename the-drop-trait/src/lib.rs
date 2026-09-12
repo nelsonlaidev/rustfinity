@@ -8,7 +8,6 @@ pub struct TempFile {
 }
 
 impl TempFile {
-    // 1. Define the `new` associated function
     pub fn new(file_name: impl AsRef<str>) -> Result<Self, String> {
         let file = File::create(file_name.as_ref());
 
@@ -23,12 +22,10 @@ impl TempFile {
 
 impl Drop for TempFile {
     fn drop(&mut self) {
-        // Your code here to delete the file when TempFile is dropped
         let _ = fs::remove_file(&self.path);
     }
 }
 
-// Example usage
 pub fn main() {
     let file_path = PathBuf::from("example_temp_file.tmp");
     let tempfile =

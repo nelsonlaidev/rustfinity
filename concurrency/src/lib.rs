@@ -4,7 +4,6 @@ pub fn concurrent_add<T: Add<Output = T> + Send + 'static + Copy>(
     items: Vec<T>,
     num: T,
 ) -> Vec<thread::JoinHandle<T>> {
-    // Implement the function here
     let mut handles = Vec::new();
 
     for item in items {
@@ -14,7 +13,6 @@ pub fn concurrent_add<T: Add<Output = T> + Send + 'static + Copy>(
     handles
 }
 
-// Example Usage
 pub fn main() {
     {
         let mut list = vec![1, 2, 3, 4, 5];

@@ -1,5 +1,4 @@
 pub enum Animal {
-    // Define the Animal variants here
     Dog,
     Cat(String),
     Bird { species: String, can_fly: bool },
@@ -19,7 +18,6 @@ pub fn describe_animal(animal: &Animal) -> String {
     }
 }
 
-// Example use case
 pub fn main() {
     let dog = Animal::Dog;
     assert_eq!(describe_animal(&dog), "A friendly dog.");

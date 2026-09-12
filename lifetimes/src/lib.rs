@@ -4,9 +4,8 @@ pub fn longest<'a>(a: &'a str, b: &'a str) -> &'a str {
     } else {
         b
     }
-} // Finish the function
+}
 
-// Example usage
 pub fn main() {
     let s1 = "short";
     let s2 = "longer string";

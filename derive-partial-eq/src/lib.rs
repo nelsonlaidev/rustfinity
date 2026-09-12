@@ -1,4 +1,3 @@
-// Finish the enum definition
 #[derive(PartialEq, Debug)]
 pub enum OrderStatus {
     Pending,
@@ -6,7 +5,6 @@ pub enum OrderStatus {
     Cancelled(String),
 }
 
-// Example use case
 pub fn main() {
     let status1 = OrderStatus::Pending;
     let status2 = OrderStatus::Pending;

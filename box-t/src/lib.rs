@@ -4,7 +4,6 @@ pub struct Animal {
 }
 
 pub fn create_animal(name: &str, age: u8) -> Box<Animal> {
-    // Your code here
     Box::new(Animal {
         name: name.to_string(),
         age,
@@ -12,11 +11,9 @@ pub fn create_animal(name: &str, age: u8) -> Box<Animal> {
 }
 
 pub fn access_animal(animal: Box<Animal>) -> (String, u8) {
-    // Your code here
     (animal.name, animal.age)
 }
 
-// Example usage
 pub fn main() {
     let animal = create_animal("Leo", 5);
     let (name, age) = access_animal(animal);

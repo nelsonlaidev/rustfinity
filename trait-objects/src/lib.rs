@@ -1,9 +1,7 @@
-// 1. Create the Renderable trait
 pub trait Renderable {
     fn render(&self) -> String;
 }
 
-// 2. Create the Circle and Rectangle structs
 pub struct Circle {
     pub radius: f64,
 }
@@ -13,7 +11,6 @@ pub struct Rectangle {
     pub height: f64,
 }
 
-// 3. Implement the trait for Circle and Rectangle
 impl Renderable for Circle {
     fn render(&self) -> String {
         format!("Circle with radius {}", self.radius)
@@ -28,12 +25,10 @@ impl Renderable for Rectangle {
     }
 }
 
-// 4. Create the Canvas struct
 pub struct Canvas {
     shapes: Vec<Box<dyn Renderable>>,
 }
 
-// 5. Implement the Canvas struct
 impl Canvas {
     pub fn new() -> Canvas {
         Canvas { shapes: Vec::new() }
@@ -48,7 +43,6 @@ impl Canvas {
     }
 }
 
-// Example usage
 pub fn main() {
     let mut canvas = Canvas::new();
     canvas.add_shape(Box::new(Circle { radius: 5.0 }));

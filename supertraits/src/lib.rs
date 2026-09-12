@@ -1,23 +1,18 @@
-// 1. Finish the trait definition
 pub trait Person {
     fn name(&self) -> String;
 }
 
-// 2. Finish the trait definition
 pub trait Student: Person {
     fn id(&self) -> u32;
     fn field_of_study(&self) -> String;
 }
 
-// 3. Finish the struct definition
 pub struct Undergraduate {
-    // Define fields for id, name, and field_of_study here...
     pub id: u32,
     pub name: String,
     pub field_of_study: String,
 }
 
-// 4. Implement the necessary traits for the Undergraduate struct
 impl Person for Undergraduate {
     fn name(&self) -> String {
         self.name.clone()
@@ -34,7 +29,6 @@ impl Student for Undergraduate {
     }
 }
 
-// Example usage
 pub fn main() {
     let student = Undergraduate {
         id: 101,

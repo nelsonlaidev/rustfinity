@@ -1,13 +1,11 @@
 use std::collections::HashMap;
 
 pub struct Student {
-    // 1. Define the fields
     pub name: String,
     pub grades: Vec<u8>,
 }
 
 pub struct StudentGrades {
-    // 2. Define the fields
     pub students: HashMap<String, Student>,
 }
 
@@ -18,9 +16,7 @@ impl StudentGrades {
         }
     }
 
-    // 3. Implement the methods
     pub fn add_student(&mut self, name: &str) {
-        // Implement here
         self.students.insert(
             name.to_string(),
             Student {
@@ -31,14 +27,12 @@ impl StudentGrades {
     }
 
     pub fn add_grade(&mut self, name: &str, grade: u8) {
-        // Implement here
         if let Some(student) = self.students.get_mut(name) {
             student.grades.push(grade);
         }
     }
 
     pub fn get_grades(&self, name: &str) -> &[u8] {
-        // Implement here
         if let Some(student) = self.students.get(&name.to_string()) {
             &student.grades
         } else {
@@ -47,7 +41,6 @@ impl StudentGrades {
     }
 }
 
-// Example usage
 pub fn main() {
     let mut tracker = StudentGrades::new();
 
@@ -58,6 +51,6 @@ pub fn main() {
     tracker.add_grade("Alice", 90);
     tracker.add_grade("Bob", 78);
 
-    println!("{:?}", tracker.get_grades("Alice")); // [85, 90]
-    println!("{:?}", tracker.get_grades("Bob")); // [78]
+    println!("{:?}", tracker.get_grades("Alice"));
+    println!("{:?}", tracker.get_grades("Bob"));
 }

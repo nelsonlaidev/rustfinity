@@ -1,5 +1,4 @@
 pub enum Card {
-    // Define the Card variants here
     King,
     Queen,
     Jack,

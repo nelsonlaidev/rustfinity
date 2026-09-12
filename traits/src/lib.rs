@@ -12,7 +12,6 @@ pub struct Book {
     pub author: String,
 }
 
-// TODO: Implement the `Describable` trait for `Person` and `Book`
 impl Describable for Person {
     fn describe(&self) -> String {
         format!("Person: {}, Age: {}", self.name, self.age)
@@ -25,7 +24,6 @@ impl Describable for Book {
     }
 }
 
-// Example usage
 pub fn main() {
     let person = Person {
         name: "Alice".to_string(),

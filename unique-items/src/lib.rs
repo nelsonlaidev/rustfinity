@@ -1,6 +1,5 @@
 use std::collections::HashSet;
 
-// 1. Finish the function
 pub fn unique_items<I, T>(items: I) -> Vec<String>
 where
     I: Iterator<Item = T>,
@@ -21,7 +20,6 @@ where
     result
 }
 
-/// Example usage
 pub fn main() {
     let product_ids = vec![
         "abc123".to_string(),

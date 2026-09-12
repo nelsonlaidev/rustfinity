@@ -1,5 +1,4 @@
 pub fn parse_percentage(input: &str) -> Result<u8, String> {
-    // TODO: Implement the function here
     let number = input.parse::<u8>();
 
     match number {
@@ -14,7 +13,6 @@ pub fn parse_percentage(input: &str) -> Result<u8, String> {
     }
 }
 
-// Example usage
 pub fn main() {
     let result = parse_percentage("50");
     assert_eq!(result, Ok(50));
