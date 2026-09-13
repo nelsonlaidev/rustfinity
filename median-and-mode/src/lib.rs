@@ -22,8 +22,13 @@ pub fn mode(numbers: &Vec<i32>) -> Vec<i32> {
 
     let max_val = map.values().copied().max().unwrap_or(0);
 
-    map.into_iter()
+    let mut modes: Vec<i32> = map
+        .into_iter()
         .filter(|&(_, val)| val == max_val)
         .map(|(num, _)| num)
-        .collect()
+        .collect();
+
+    modes.sort();
+
+    modes
 }
