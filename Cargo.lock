@@ -376,6 +376,10 @@ name = "sum-of-array"
 version = "0.1.0"
 
 [[package]]
+name = "sum-of-even-numbers"
+version = "0.1.0"
+
+[[package]]
 name = "supertraits"
 version = "0.1.0"
 dependencies = [
