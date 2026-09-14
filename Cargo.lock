@@ -416,6 +416,10 @@ name = "string-parsing"
 version = "0.1.0"
 
 [[package]]
+name = "string-patterns"
+version = "0.1.0"
+
+[[package]]
 name = "structs"
 version = "0.1.0"
 
