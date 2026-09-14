@@ -70,31 +70,26 @@ pub fn parse_list<T: FromStr>(s: &str, delimiter: char) -> Result<Vec<T>, String
 }
 
 pub fn main() {
-    // Demonstrate parse_int
     println!("Parsing integers:");
     println!("  '42' -> {:?}", parse_int("42"));
     println!("  '-17' -> {:?}", parse_int("-17"));
     println!("  'abc' -> {:?}", parse_int("abc"));
 
-    // Demonstrate parse_bool
     println!("\nParsing booleans:");
     println!("  'true' -> {:?}", parse_bool("true"));
     println!("  'YES' -> {:?}", parse_bool("YES"));
     println!("  '0' -> {:?}", parse_bool("0"));
     println!("  'maybe' -> {:?}", parse_bool("maybe"));
 
-    // Demonstrate parse_key_value
     println!("\nParsing key=value pairs:");
     println!("  'name=Alice' -> {:?}", parse_key_value("name=Alice"));
     println!("  'count=42' -> {:?}", parse_key_value("count=42"));
     println!("  'invalid' -> {:?}", parse_key_value("invalid"));
 
-    // Demonstrate Color parsing
     println!("\nParsing colors:");
     let color: Result<Color, _> = "255,128,0".parse();
     println!("  '255,128,0' -> {:?}", color);
 
-    // Demonstrate parse_list
     println!("\nParsing lists:");
     println!("  '1,2,3' as i32 -> {:?}", parse_list::<i32>("1,2,3", ','));
 }

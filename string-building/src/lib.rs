@@ -87,15 +87,12 @@ pub fn concat_with_separator(parts: &[&str], sep: &str) -> String {
 }
 
 pub fn main() {
-    // Demonstrate build_greeting
     println!("=== build_greeting ===");
     println!("{}", build_greeting("Alice", 30));
 
-    // Demonstrate build_list
     println!("\n=== build_list ===");
     println!("{}", build_list(&["apple", "banana", "cherry"]));
 
-    // Demonstrate Person Display
     println!("\n=== Person Display ===");
     let person = Person {
         name: "Bob".to_string(),
@@ -103,7 +100,6 @@ pub fn main() {
     };
     println!("{}", person);
 
-    // Demonstrate build_table
     println!("\n=== build_table ===");
     let headers = &["Name", "Age"];
     let rows = vec![
@@ -112,7 +108,6 @@ pub fn main() {
     ];
     println!("{}", build_table(headers, &rows));
 
-    // Demonstrate concat_with_separator
     println!("\n=== concat_with_separator ===");
     println!("{}", concat_with_separator(&["a", "b", "c"], ", "));
 }

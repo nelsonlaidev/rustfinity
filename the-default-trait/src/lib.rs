@@ -25,13 +25,10 @@ impl Default for AppConfig {
     }
 }
 
-// Example usage
 pub fn main() {
-    // Create a default configuration
     let default_config = AppConfig::default();
     println!("Default Config: {:?}", default_config);
 
-    // Create a custom configuration using ..Default::default()
     let custom_config = AppConfig {
         theme: String::from("Dark"),
         ..Default::default()
