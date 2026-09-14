@@ -400,6 +400,10 @@ name = "string-basics"
 version = "0.1.0"
 
 [[package]]
+name = "string-building"
+version = "0.1.0"
+
+[[package]]
 name = "string-manipulation"
 version = "0.1.0"
 
