@@ -198,6 +198,10 @@ name = "graceful-error-handling-2"
 version = "0.1.0"
 
 [[package]]
+name = "hashmap-advanced"
+version = "0.1.0"
+
+[[package]]
 name = "hashmaps"
 version = "0.1.0"
 
