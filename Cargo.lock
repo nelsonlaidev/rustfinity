@@ -334,6 +334,10 @@ name = "panic"
 version = "0.1.0"
 
 [[package]]
+name = "path-operations"
+version = "0.1.0"
+
+[[package]]
 name = "playing-cards"
 version = "0.1.0"
 
